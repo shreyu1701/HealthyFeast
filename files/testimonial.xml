@@ -1,0 +1,25 @@
+<Testimonials>
+    <Testimonial>
+        <CustomerName>Niki</CustomerName>
+        <Occupation>Health Enthusiast</Occupation>
+        <Image src="./images/customer/pexels-ozanculha-28949028.jpg" alt="Customer 1"/>
+        <Quote>HealthyFeast has transformed my eating habits! The recipes are delicious and easy to follow. I feel more energized and healthier than ever!</Quote>
+        <Rating>★★★★★</Rating>
+    </Testimonial>
+
+    <Testimonial>
+        <CustomerName>Manav</CustomerName>
+        <Occupation>Busy Professional</Occupation>
+        <Image src="./images/customer/pexels-lucas-agustin-303343526-28940860.jpg" alt="Customer 2"/>
+        <Quote>I love how the platform offers a wide variety of meals, and I’ve learned to cook healthier while enjoying my food more. Highly recommended!</Quote>
+        <Rating>★★★★★</Rating>
+    </Testimonial>
+
+    <Testimonial>
+        <CustomerName>Taranjit</CustomerName>
+        <Occupation>Fitness Enthusiast</Occupation>
+        <Image src="./images/customer/pexels-priscila-almeida-94971422-28944195.jpg" alt="Customer 3"/>
+        <Quote>The personalized meal plans helped me stay on track with my fitness goals. Plus, every recipe is full of flavor!</Quote>
+        <Rating>★★★★★</Rating>
+    </Testimonial>
+</Testimonials>

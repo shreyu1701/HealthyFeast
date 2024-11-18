@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ProjectGroup>
+    <Member>
+        <Name>Shreyansh Koladiya</Name>
+        <Role>Team Leader</Role>
+        <WorkDescription>Oversees the project workflow, assigns tasks, and ensures timely delivery.</WorkDescription>
+        <Image src="./images/Shreyansh.jpg" alt="member 1"/>
+    </Member>
+    <Member>
+        <Name>Manav Patel</Name>
+        <Role>Backend Developer</Role>
+        <WorkDescription>Develops and maintains server-side logic, APIs, and database integrations.</WorkDescription>
+        <Image src="./images/manav.jpg" alt="member 2"/>
+    </Member>
+    <Member>
+        <Name>Taranjit Kaur</Name>
+        <Role>Frontend Developer</Role>
+        <WorkDescription>Designs and implements user interface components and ensures responsiveness.</WorkDescription>
+        <Image src="./images/taranjit.jpg" alt="member 2"/>
+    </Member>
+    <Member>
+        <Name>Nikita Sawant</Name>
+        <Role>Quality Assurance</Role>
+        <WorkDescription>Tests functionality, identifies bugs, and ensures the software meets quality standards.</WorkDescription>
+        <Image src="./images/nikita.jpg" alt="member 2"/>
+    </Member>
+</ProjectGroup>

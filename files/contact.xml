@@ -1,0 +1,7 @@
+<ContactInformation>
+    <Title>Contact Information</Title>
+    <Email href="mailto:info@healthyfeast.com">info@healthyfeast.com</Email>
+    <Phone href="tel:+1234567890">+1 234 567 890</Phone>
+    <Address>123 Healthy St, Wellness City, State, 12345</Address>
+    <BusinessHours>Mon - Fri, 9 AM - 5 PM</BusinessHours>
+</ContactInformation>

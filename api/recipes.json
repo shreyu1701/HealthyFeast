@@ -1,0 +1,222 @@
+[
+  {
+    "id": 1,
+    "image": "https://example.com/recipe1.jpg",
+    "title": "Quinoa Salad with Avocado",
+    "description": "A refreshing salad made with quinoa, fresh vegetables, and creamy avocado.",
+    "nutritionalInfo": {
+      "protein": "8g",
+      "carbs": "30g",
+      "fat": "4g"
+    }
+  },
+  {
+    "id": 2,
+    "image": "https://example.com/recipe2.jpg",
+    "title": "Grilled Chicken and Vegetables",
+    "description": "A hearty dish with grilled chicken breast and mixed vegetables.",
+    "nutritionalInfo": {
+      "protein": "25g",
+      "carbs": "15g",
+      "fat": "5g"
+    }
+  },
+  {
+    "id": 3,
+    "image": "https://example.com/recipe3.jpg",
+    "title": "Chickpea and Spinach Stew",
+    "description": "A rich and nutritious stew with chickpeas, spinach, and spices.",
+    "nutritionalInfo": {
+      "protein": "10g",
+      "carbs": "35g",
+      "fat": "3g"
+    }
+  },
+  {
+    "id": 4,
+    "image": "https://example.com/recipe4.jpg",
+    "title": "Avocado Toast with Poached Eggs",
+    "description": "Whole grain toast topped with mashed avocado and perfectly poached eggs.",
+    "nutritionalInfo": {
+      "protein": "12g",
+      "carbs": "20g",
+      "fat": "7g"
+    }
+  },
+  {
+    "id": 5,
+    "image": "https://example.com/recipe5.jpg",
+    "title": "Sweet Potato and Black Bean Bowl",
+    "description": "A flavorful bowl with roasted sweet potatoes, black beans, and spices.",
+    "nutritionalInfo": {
+      "protein": "9g",
+      "carbs": "40g",
+      "fat": "5g"
+    }
+  },
+  {
+    "id": 6,
+    "image": "https://example.com/recipe6.jpg",
+    "title": "Lentil and Vegetable Stir-Fry",
+    "description": "A quick stir-fry made with lentils and colorful vegetables.",
+    "nutritionalInfo": {
+      "protein": "11g",
+      "carbs": "28g",
+      "fat": "3g"
+    }
+  },
+  {
+    "id": 7,
+    "image": "https://example.com/recipe7.jpg",
+    "title": "Zucchini Noodles with Pesto",
+    "description": "Low-carb zucchini noodles tossed in fresh basil pesto.",
+    "nutritionalInfo": {
+      "protein": "6g",
+      "carbs": "14g",
+      "fat": "10g"
+    }
+  },
+  {
+    "id": 8,
+    "image": "https://example.com/recipe8.jpg",
+    "title": "Salmon with Quinoa and Greens",
+    "description": "Pan-seared salmon served with quinoa and leafy greens.",
+    "nutritionalInfo": {
+      "protein": "22g",
+      "carbs": "25g",
+      "fat": "12g"
+    }
+  },
+  {
+    "id": 9,
+    "image": "https://example.com/recipe9.jpg",
+    "title": "Tofu and Vegetable Stir-Fry",
+    "description": "A plant-based stir-fry with tofu and mixed vegetables.",
+    "nutritionalInfo": {
+      "protein": "15g",
+      "carbs": "20g",
+      "fat": "8g"
+    }
+  },
+  {
+    "id": 10,
+    "image": "https://example.com/recipe10.jpg",
+    "title": "Greek Yogurt with Berries and Nuts",
+    "description": "A creamy yogurt bowl topped with fresh berries and nuts.",
+    "nutritionalInfo": {
+      "protein": "10g",
+      "carbs": "18g",
+      "fat": "5g"
+    }
+  },
+  {
+    "id": 11,
+    "image": "https://example.com/recipe11.jpg",
+    "title": "Stuffed Bell Peppers with Rice and Beans",
+    "description": "Bell peppers stuffed with rice, beans, and spices.",
+    "nutritionalInfo": {
+      "protein": "9g",
+      "carbs": "35g",
+      "fat": "4g"
+    }
+  },
+  {
+    "id": 12,
+    "image": "https://example.com/recipe12.jpg",
+    "title": "Vegetable Soup with Lentils",
+    "description": "A hearty soup loaded with vegetables and lentils.",
+    "nutritionalInfo": {
+      "protein": "8g",
+      "carbs": "30g",
+      "fat": "2g"
+    }
+  },
+  {
+    "id": 13,
+    "image": "https://example.com/recipe13.jpg",
+    "title": "Turkey and Spinach Wrap",
+    "description": "Whole wheat wrap filled with turkey, spinach, and hummus.",
+    "nutritionalInfo": {
+      "protein": "14g",
+      "carbs": "22g",
+      "fat": "6g"
+    }
+  },
+  {
+    "id": 14,
+    "image": "https://example.com/recipe14.jpg",
+    "title": "Cauliflower Rice with Vegetables",
+    "description": "A low-carb, veggie-packed dish with cauliflower rice.",
+    "nutritionalInfo": {
+      "protein": "5g",
+      "carbs": "18g",
+      "fat": "4g"
+    }
+  },
+  {
+    "id": 15,
+    "image": "https://example.com/recipe15.jpg",
+    "title": "Eggplant Parmesan with Zoodles",
+    "description": "A lighter version of eggplant Parmesan served with zucchini noodles.",
+    "nutritionalInfo": {
+      "protein": "9g",
+      "carbs": "25g",
+      "fat": "7g"
+    }
+  },
+  {
+    "id": 16,
+    "image": "https://example.com/recipe16.jpg",
+    "title": "Baked Cod with Asparagus",
+    "description": "Flaky cod baked with asparagus and fresh herbs.",
+    "nutritionalInfo": {
+      "protein": "20g",
+      "carbs": "10g",
+      "fat": "3g"
+    }
+  },
+  {
+    "id": 17,
+    "image": "https://example.com/recipe17.jpg",
+    "title": "Chia Pudding with Mango",
+    "description": "Creamy chia pudding layered with fresh mango puree.",
+    "nutritionalInfo": {
+      "protein": "6g",
+      "carbs": "32g",
+      "fat": "5g"
+    }
+  },
+  {
+    "id": 18,
+    "image": "https://example.com/recipe18.jpg",
+    "title": "Veggie-Packed Omelet",
+    "description": "An omelet filled with bell peppers, onions, and spinach.",
+    "nutritionalInfo": {
+      "protein": "12g",
+      "carbs": "5g",
+      "fat": "8g"
+    }
+  },
+  {
+    "id": 19,
+    "image": "https://example.com/recipe19.jpg",
+    "title": "Avocado and Black Bean Tacos",
+    "description": "Soft tacos filled with mashed avocado, black beans, and salsa.",
+    "nutritionalInfo": {
+      "protein": "9g",
+      "carbs": "30g",
+      "fat": "10g"
+    }
+  },
+  {
+    "id": 20,
+    "image": "https://example.com/recipe20.jpg",
+    "title": "Banana Oat Pancakes",
+    "description": "Fluffy pancakes made with bananas and oats, perfect for breakfast.",
+    "nutritionalInfo": {
+      "protein": "8g",
+      "carbs": "35g",
+      "fat": "5g"
+    }
+  }
+]

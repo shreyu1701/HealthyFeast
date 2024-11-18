@@ -6,7 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HealthyFeast | Home</title>
     <link rel="icon" type="image/x-icon" href="/images/Healthy-removebg-preview.png">
-    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.js"></script>
+
+    <link rel=" stylesheet" href="./styles/style.css">
+
+    <script src="main.js" defer></script>
 
 </head>
 
@@ -14,17 +20,22 @@
     <!-- Header Section -->
     <header>
         <div class="logo">
-            <a href="./index.html"><img src="./images/Healthy-removebg-preview.png" alt="HealthyFeast Logo"> </a>
+            <a href="../index.html"><img src="../images/Healthy-removebg-preview.png" alt="HealthyFeast Logo"> </a>
         </div>
         <nav>
-            <ul>
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./recipes.html">Healthy Recipes</a></li>
-                <li><a href="./blog.html">Blog</a></li>
-                <li><a href="./about.html">About</a></li>
-                <li><a href="./contact.html">Contact Us</a></li>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./pages/recipes.html"> Recipes</a></li>
+                <li><a href="../pages/blog.html">Blog</a></li>
+                <li><a href="./pages/about.html">About</a></li>
+                <li><a href="./pages/contact.html">Contact Us</a></li>
             </ul>
         </nav>
+        <div class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
     </header>
 
     <!-- Main Section -->
@@ -39,8 +50,18 @@
             </div>
 
             <p>Your ultimate destination for healthy eating and nutritious recipes.</p>
-            <a href="./recipes.html" class="cta-button">Learn More</a>
+            <a href="./pages/recipes.html" class="cta-button">Learn More</a>
         </section>
+
+
+        <!-- BMI Section -->
+        <section class="bmi">
+            <h2 class="bmih2">Let's find your BMI ! </h2>
+            <div class="bmi-container">
+                <a href="./pages/calculatebmi.html" class="bmi-button">Go to BMI Calculator</a>
+            </div>
+        </section>
+        <!-- BMI Section Ends -->
 
         <!-- Why healthy eating matters Section -->
         <section id="benefits">
@@ -77,6 +98,66 @@
                 </div>
             </div>
         </section>
+
+
+        <main id="main-content" class="main-content">
+            <section class="news-section">
+                <div class="container">
+                    <h1>Healthy Eating News</h1>
+                    <!-- Search and Filter Controls -->
+                    <div class="news-controls">
+                        <div class="search-container">
+                            <input type="text" id="newsSearch" class="search-input" placeholder="Search news..."
+                                aria-label="Search news">
+                            <button class="search-button" aria-label="Search">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+
+                        <div class="filter-container">
+                            <select id="newsFilter" class="category-filter" aria-label="Filter news by category">
+                                <option value="all">All Categories</option>
+                                <option value="health">Health</option>
+                                <option value="technology">Technology</option>
+                                <option value="science">Science</option>
+                                <option value="environment">Environment</option>
+                                <option value="innovation">Innovation</option>
+                            </select>
+                        </div>
+
+                        <div class="sort-container">
+                            <select id="newsSort" class="sort-filter" aria-label="Sort news">
+                                <option value="latest">Latest</option>
+                                <option value="oldest">Oldest</option>
+                                <option value="trending">Trending</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- News Container -->
+                    <div id="newsContainer" class="news-container" aria-live="polite">
+                        <!-- News items will be dynamically loaded here -->
+                        <div class="loading-spinner">
+                            <div class="spinner"></div>
+                            <p>Loading news...</p>
+                        </div>
+                    </div>
+
+                    <!-- Pagination -->
+                    <div class="pagination">
+                        <button id="prevPage" class="pagination-btn" aria-label="Previous page">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <span id="currentPage" class="page-number">1</span>
+                        <button id="nextPage" class="pagination-btn" aria-label="Next page">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+
         <!-- healthy recipes -->
         <section>
             <div class="banner">
@@ -127,54 +208,19 @@
                     </div>
                 </div>
                 <!-- More recipe button -->
-                <a href="./recipes.html" class="cta-button">More Recipe's ?</a>
+                <a href="../pages/recipes.html" class="cta-button">More Recipe's ?</a>
             </div>
         </section>
 
-        <!-- testimonials-section -->
-        <section>
+        <!-- Testimonial Section  -->
+
+        <section aria-labelledby="testimonials-title">
             <div class="testimonials-section">
-                <h2>What Our Customers Say</h2>
-
-                <div class="testimonials-slider">
-                    <!-- Testimonial 1 -->
-                    <div class="testimonial-card">
-                        <img src="./images/customer/pexels-ozanculha-28949028.jpg" alt="Customer 1"
-                            class="testimonial-image">
-                        <p class="testimonial-quote">"HealthyFeast has transformed my eating habits! The recipes are
-                            delicious and easy to follow. I feel more energized and healthier than ever!"</p>
-                        <div class="testimonial-stars">
-                            <span>★★★★★</span>
-                        </div>
-                        <p class="testimonial-name">- Sarah, Health Enthusiast</p>
-                    </div>
-
-                    <!-- Testimonial 2 -->
-                    <div class="testimonial-card">
-                        <img src="./images/customer/pexels-lucas-agustin-303343526-28940860.jpg" alt="Customer 2"
-                            class="testimonial-image">
-                        <p class="testimonial-quote">"I love how the platform offers a wide variety of meals, and I’ve
-                            learned to cook healthier while enjoying my food more. Highly recommended!"</p>
-                        <div class="testimonial-stars">
-                            <span>★★★★★</span>
-                        </div>
-                        <p class="testimonial-name">- John, Busy Professional</p>
-                    </div>
-
-                    <!-- Testimonial 3 -->
-                    <div class="testimonial-card">
-                        <img src="./images/customer/pexels-priscila-almeida-94971422-28944195.jpg" alt="Customer 3"
-                            class="testimonial-image">
-                        <p class="testimonial-quote">"The personalized meal plans helped me stay on track with my
-                            fitness goals. Plus, every recipe is full of flavor!"</p>
-                        <div class="testimonial-stars">
-                            <span>★★★★★</span>
-                        </div>
-                        <p class="testimonial-name">- Emily, Fitness Enthusiast</p>
-                    </div>
-                </div>
+                <h2 id="testimonials-title">What Our Customers Say</h2>
+                <div id="testimonials-container" class="testimonials-slider"></div>
             </div>
         </section>
+
 
         <!-- Newsletter -->
 
@@ -186,8 +232,8 @@
                         journey towards a healthier lifestyle!</p>
 
                     <!-- Subscription Form -->
-                    <form class="cta-form" action="#" method="POST">
-                        <input type="email" name="email" placeholder="Enter your email address" required>
+                    <form class="cta-form" id="ctaForm" action="#" method="POST" novalidate>
+                        <input type="email" name="email" placeholder="Enter your email address">
                         <button type="submit" class="cta-subbutton">Subscribe</button>
                     </form>
                 </div>
@@ -195,6 +241,99 @@
         </section>
 
     </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Load XML file
+            fetch('files/testimonial.xml')
+                .then(response => response.text())
+                .then(data => {
+                    const parser = new DOMParser();
+                    const xmlDoc = parser.parseFromString(data, "text/xml");
+                    const testimonials = xmlDoc.getElementsByTagName("Testimonial");
+                    const container = document.getElementById("testimonials-container");
+
+                    // Loop through each Testimonial node
+                    Array.from(testimonials).forEach(testimonial => {
+                        const name = testimonial.getElementsByTagName("CustomerName")[0].textContent;
+                        const occupation = testimonial.getElementsByTagName("Occupation")[0].textContent;
+                        const imageSrc = testimonial.getElementsByTagName("Image")[0].getAttribute("src");
+                        const imageAlt = testimonial.getElementsByTagName("Image")[0].getAttribute("alt");
+                        const quote = testimonial.getElementsByTagName("Quote")[0].textContent;
+                        const rating = testimonial.getElementsByTagName("Rating")[0].textContent;
+
+                        // Create HTML for each testimonial
+                        const cardHTML = `
+                    <div class="testimonial-card">
+                        <img src="${imageSrc}" alt="${imageAlt}" class="testimonial-image">
+                        <blockquote class="testimonial-quote">
+                            <p>"${quote}"</p>
+                        </blockquote>
+                        <div class="testimonial-stars">
+                            <span aria-hidden="true">${rating}</span>
+                        </div>
+                        <p class="testimonial-name">- ${name}, ${occupation}</p>
+                    </div>
+                `;
+
+                        // Append testimonial card to the container
+                        container.innerHTML += cardHTML;
+                    });
+                })
+                .catch(error => console.error("Error loading XML data:", error));
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('ctaForm');
+            const emailInput = form.querySelector('input[name="email"]');
+
+            form.addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+                if (!emailInput.value.trim()) {
+                    // Empty email
+                    Toastify({
+                        text: "Please enter an email address",
+                        duration: 3000,
+                        close: true,
+                        gravity: "top",
+                        position: "right",
+                        backgroundColor: "#FF6B6B",
+                    }).showToast();
+                    return;
+                }
+
+                if (!emailPattern.test(emailInput.value)) {
+                    // Invalid email format
+                    Toastify({
+                        text: "Please enter a valid email address",
+                        duration: 3000,
+                        close: true,
+                        gravity: "top",
+                        position: "right",
+                        backgroundColor: "#FF6B6B",
+                    }).showToast();
+                    return;
+                }
+
+                // Successful submission
+                Toastify({
+                    text: "Subscription successful! Thank you for joining HealthyFeast",
+                    duration: 3000,
+                    close: true,
+                    gravity: "top",
+                    position: "right",
+                    backgroundColor: "#4CAF50",
+                }).showToast();
+
+                // Optional: Clear the input after successful submission
+                emailInput.value = '';
+            });
+        });
+
+    </script>
 
     <!-- Footer Section -->
     <footer class="footer">
@@ -212,12 +351,12 @@
                 <h3>Quick Links</h3>
                 <ul>
                     <li><a href="./index.html">Home</a></li>
-                    <li><a href="./recipes.html">Healthy Recipes</a></li>
-                    <li><a href="./blog.html">Blog</a></li>
-                    <li><a href="./about.html">About Us</a></li>
-                    <li><a href="./contact.html">Contact Us</a></li>
-                    <li><a href="./privacy.html">Privacy Policy</a></li>
-                    <li><a href="./terms-conditions.html">Terms & Conditions</a></li>
+                    <li><a href="./pages/recipes.html">Healthy Recipes</a></li>
+                    <li><a href="../pages/blog.html">Blog</a></li>
+                    <li><a href="./pages/about.html">About Us</a></li>
+                    <li><a href="./pages/contact.html">Contact Us</a></li>
+                    <li><a href="./pages/privacy.html">Privacy Policy</a></li>
+                    <li><a href="./pages/terms-conditions.html">Terms & Conditions</a></li>
                 </ul>
             </div>
 

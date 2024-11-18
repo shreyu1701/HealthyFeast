@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "title": "New Health Benefits of Eating Vegetables",
+    "description": "A recent study reveals the numerous health benefits of consuming a wide variety of vegetables regularly.",
+    "date": "2024-11-10",
+    "category": "Health",
+    "image": "https://images.unsplash.com/photo-1546548970-71785318a17b?ixlib=rb-4.0.3&ixid=vegetables+nutrition&w=600&h=400",
+    "author": "Dr. Sarah Johnson",
+    "readTime": "5 min read"
+  },
+  {
+    "id": 2,
+    "title": "Understanding the Importance of Regular Exercise",
+    "description": "Exercise is essential for maintaining mental and physical health. Here's why it's so important.",
+    "date": "2024-11-08",
+    "category": "Fitness",
+    "image": "https://images.unsplash.com/photo-1599058917765-a780eda07a3e?ixlib=rb-4.0.3&ixid=fitness+training&w=600&h=400",
+    "author": "Mark Williams",
+    "readTime": "4 min read"
+  },
+  {
+    "id": 3,
+    "title": "Why Hydration is Key to Good Health",
+    "description": "Hydration plays a crucial role in overall health. Learn more about how water affects your body.",
+    "date": "2024-11-05",
+    "category": "Wellness",
+    "image": "https://images.unsplash.com/photo-1582765114728-428aa4d1ff36?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "author": "Emily Roberts",
+    "readTime": "3 min read"
+  },
+  {
+    "id": 4,
+    "title": "Breakthrough in Renewable Energy Technology",
+    "description": "Scientists develop a new solar panel technology that increases energy efficiency by 40%.",
+    "date": "2024-11-12",
+    "category": "Technology",
+    "image": "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixlib=rb-4.0.3&ixid=renewable+energy&w=600&h=400",
+    "author": "Alex Chen",
+    "readTime": "6 min read"
+  },
+  {
+    "id": 5,
+    "title": "Mental Health Awareness: Strategies for Stress Management",
+    "description": "Experts share practical tips for managing stress and maintaining mental well-being in modern life.",
+    "date": "2024-11-15",
+    "category": "Mental Health",
+    "image": "https://images.unsplash.com/photo-1593164842264-854604db2260?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60",
+    "author": "Dr. Rachel Green",
+    "readTime": "5 min read"
+  },
+  {
+    "id": 6,
+    "title": "The Future of Artificial Intelligence in Healthcare",
+    "description": "How AI is revolutionizing medical diagnostics and patient care.",
+    "date": "2024-11-20",
+    "category": "Technology",
+    "image": "https://images.unsplash.com/photo-1674544362969-a4269ef0ea69?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "author": "Michael Thompson",
+    "readTime": "7 min read"
+  },
+  {
+    "id": 7,
+    "title": "Sustainable Fashion: Eco-Friendly Clothing Trends",
+    "description": "Explore the latest developments in sustainable and environmentally conscious fashion.",
+    "date": "2024-11-25",
+    "category": "Fashion",
+    "image": "https://images.unsplash.com/photo-1501127122-f385ca6ddd9d?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "author": "Lisa Martinez",
+    "readTime": "4 min read"
+  },
+  {
+    "id": 8,
+    "title": "Nutrition Myths Debunked by Experts",
+    "description": "Top nutritionists reveal the truth behind common dietary misconceptions.",
+    "date": "2024-12-01",
+    "category": "Health",
+    "image": "https://images.unsplash.com/photo-1627820751275-e44b937c5d33?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "author": "David Rodriguez",
+    "readTime": "5 min read"
+  },
+  {
+    "id": 9,
+    "title": "The Rise of Remote Work: Trends and Predictions",
+    "description": "An in-depth look at how remote work is changing the global job market.",
+    "date": "2024-12-05",
+    "category": "Career",
+    "image": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "author": "Jennifer Wong",
+    "readTime": "6 min read"
+  },
+  {
+    "id": 10,
+    "title": "Breakthrough in Cancer Research",
+    "description": "New treatment shows promising results in early-stage clinical trials.",
+    "date": "2024-12-10",
+    "category": "Medical",
+    "image": "https://images.unsplash.com/photo-1615631648086-325025c9e51e?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "author": "Dr. Robert Kim",
+    "readTime": "8 min read"
+  }
+]

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stacked Sections</title>
+    <link rel="icon" type="image/x-icon" href="../images/Healthy-removebg-preview.png">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.js"></script>
+    <script src="../main.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <a href="../index.html"><img src="../images/Healthy-removebg-preview.png" alt="HealthyFeast Logo"> </a>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../pages/recipes.html"> Recipes</a></li>
+                <li><a href="../pages/blog.html">Blog</a></li>
+                <li><a href="../pages/about.html">About</a></li>
+                <li><a href="../pages/contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </header>
+
+    <!-- Section 1 -->
+    <div class="container">
+        <h2>BMI Calculator (kg/mm)</h2>
+        <form id="bmiForm">
+            <label for="weight">Weight (kg):</label>
+            <input type="number" id="weight" name="weight">
+            <br><br>
+            <label for="height">Height (inches):</label>
+            <input type="number" id="height" name="height">
+            <br><br>
+            <button type="submit">Calculate BMI</button>
+        </form>
+        <div id="bmiResult"></div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-container">
+
+            <!-- About Section -->
+            <div class="footer-about">
+                <h3>About HealthyFeast</h3>
+                <p>At HealthyFeast, we believe that healthy eating should be easy and accessible to everyone. Our
+                    platform offers personalized meal plans, delicious recipes, and tips for a healthier lifestyle.</p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./pages/recipes.html">Healthy Recipes</a></li>
+                    <li><a href="../pages/blog.html">Blog</a></li>
+                    <li><a href="./pages/about.html">About Us</a></li>
+                    <li><a href="./pages/contact.html">Contact Us</a></li>
+                    <li><a href="./pages/privacy.html">Privacy Policy</a></li>
+                    <li><a href="./pages/terms-conditions.html">Terms & Conditions</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p>Email: <a href="mailto:info@healthyfeast.com">info@healthyfeast.com</a></p>
+                <p>Phone: <a href="tel:+1234567890">+123 456 7890</a></p>
+            </div>
+
+            <!-- Social Media Icons -->
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#" target="_blank"><img src="./images/social/icons8-facebook-48.png" alt="Facebook"></a>
+                    <a href="#" target="_blank"><img src="./images/social/icons8-twitter-48.png" alt="Twitter"></a>
+                    <a href="#" target="_blank"><img src="./images/social/icons8-instagram-48.png" alt="Instagram"></a>
+                    <a href="#" target="_blank"><img src="./images/social/icons8-youtube-48.png" alt="YouTube"></a>
+                </div>
+            </div>
+
+        </div>
+        <!-- copyright -->
+        <div class="footer-bottom">
+            <p>&copy; 2024 HealthyFeast. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        $('#bmiForm').on('submit', function (event) {
+            event.preventDefault();  // Prevent form from submitting normally
+
+            const weightKg = $('#weight').val();
+            const heightInches = $('#height').val();
+
+            // Validation
+            if (!weightKg || weightKg <= 0 && weightKg >= 200) {
+                Toastify({
+                    text: "Please enter a valid weight (1-200 kg)",
+                    duration: 3000,
+                    close: true,
+                    gravity: "top",
+                    position: "right",
+                    backgroundColor: "#FF6B6B",
+                }).showToast();
+                return;
+            }
+
+            if (!heightInches || heightInches <= 0 && heightInches >= 100) {
+                Toastify({
+                    text: "Please enter a valid height (1-100 inches)",
+                    duration: 3000,
+                    close: true,
+                    gravity: "top",
+                    position: "right",
+                    backgroundColor: "#FF6B6B",
+                }).showToast();
+                return;
+            }
+
+            // Conversion: kg to lbs (1 kg = 2.20462 lbs)
+            const weightLbs = weightKg * 2.20462;
+
+            const settings = {
+                async: true,
+                crossDomain: true,
+                url: `https://smart-body-mass-index-calculator-bmi.p.rapidapi.com/api/BMI/imperial?lbs=${weightLbs.toFixed(2)}&inches=${heightInches}`,
+                method: 'GET',
+                headers: {
+                    'x-rapidapi-key': 'c712408eb2mshf3605eb7da791aap1465acjsn8ed2de14ff24',
+                    'x-rapidapi-host': 'smart-body-mass-index-calculator-bmi.p.rapidapi.com'
+                }
+            };
+
+            $.ajax(settings)
+                .done(function (response) {
+                    // Success Toastify
+                    Toastify({
+                        text: `BMI Calculated Successfully!`,
+                        duration: 3000,
+                        close: true,
+                        gravity: "top",
+                        position: "right",
+                        backgroundColor: "#4CAF50",
+                    }).showToast();
+
+                    // Display detailed BMI result
+                    $('#bmiResult').html(`
+                    <p>Your BMI is: ${response.bmi.toFixed(2)}</p>
+                    <p>Category: ${response.bmiCategoryForAdults.category}</p>
+                `);
+
+                    // Additional Toastify for BMI Category
+                    Toastify({
+                        text: `BMI Category: ${response.bmiCategoryForAdults.category}`,
+                        duration: 4000,
+                        close: true,
+                        gravity: "bottom",
+                        position: "center",
+                        backgroundColor: getBMICategoryColor(response.bmiCategoryForAdults.category)
+                    }).showToast();
+                })
+                .fail(function (xhr, status, error) {
+                    // Error Toastify
+                    Toastify({
+                        text: "Error calculating BMI. Please try again.",
+                        duration: 3000,
+                        close: true,
+                        gravity: "top",
+                        position: "right",
+                        backgroundColor: "#FF6B6B",
+                    }).showToast();
+
+                    console.error("BMI Calculation Error:", error);
+                });
+        });
+
+        // Helper function to get color based on BMI category
+        function getBMICategoryColor(category) {
+            switch (category.toLowerCase()) {
+                case 'underweight':
+                    return "#FFA500";  // Orange
+                case 'normal weight':
+                    return "#4CAF50";  // Green
+                case 'overweight':
+                    return "#FF9800";  // Deep Orange
+                case 'obese':
+                    return "#F44336";  // Red
+                default:
+                    return "#2196F3";  // Blue
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>
