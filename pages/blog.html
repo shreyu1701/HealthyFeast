@@ -22,6 +22,7 @@
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="../pages/recipes.html">Recipes</a></li>
                 <li><a href="../pages/blog.html">Blog</a></li>
+                <li><a href="../pages/mealplanner.html">Meal Planner</a></li>
                 <li><a href="../pages/news.html">News</a></li>
                 <li><a href="../pages/about.html">About</a></li>
                 <li><a href="../pages/contact.html">Contact Us</a></li>
@@ -38,82 +39,16 @@
         <!-- title -->
         <h1>Blog</h1>
         <!-- Blog section -->
-        <section class="blog-posts">
 
-            <!-- Card 1 -->
-            <div class="blog-post">
-                <img src="../images/apple-19309_1280-removebg-preview.png" alt="Healthy Eating Tips">
-                <h3>5 Healthy Eating Tips</h3>
-                <p>Discover simple and effective tips to maintain a balanced diet and improve your overall health.</p>
-                <a class="read-more" href="#">Read More</a>
+        <div class="container">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Enter a food or recipe...">
+                <button onclick="fetchFoodBlogs()">Search</button>
             </div>
-            <!-- Card 2 -->
-            <div class="blog-post">
-                <img src="../images/cooking-951950_1280-removebg-preview.png" alt="Meal Prep for Success">
-                <h3>Meal Prep for Success</h3>
-                <p>Learn how to plan and prepare your meals for the week, saving time and ensuring healthy choices.</p>
-                <a class="read-more" href="#">Read More</a>
+            <div class="results" id="resultsContainer">
+                <!-- Results will be displayed here -->
             </div>
-            <!-- Card 3 -->
-            <div class="blog-post">
-                <img src="../images/whole-grains-2234649_640-removebg-preview.png" alt="Benefits of Whole Foods">
-                <h3>The Benefits of Whole Foods</h3>
-                <p>Explore the advantages of incorporating whole foods into your diet for better health.</p>
-                <a class="read-more" href="#">Read More</a>
-            </div>
-        </section>
-
-        <!-- Blog section -->
-        <section class="blog-posts">
-            <!-- Card 1 -->
-            <div class="blog-post">
-                <img src="../images/fruit-7115896_640-removebg-preview.png" alt="Understanding Macronutrients">
-                <h3>Understanding Macronutrients</h3>
-                <p>Get to know the three main macronutrients and how they contribute to your health and fitness goals.
-                </p>
-                <a class="read-more" href="#">Read More</a>
-            </div>
-            <!-- Card 2 -->
-            <div class="blog-post">
-                <img src="../images/b7398fb9-dab9-4aa0-9ca6-20c635540ecf-removebg-preview.png"
-                    alt="Healthy Snack Ideas">
-                <h3>Healthy Snack Ideas</h3>
-                <p>Discover delicious and nutritious snack options that will keep you energized throughout the day.</p>
-                <a class="read-more" href="#">Read More</a>
-            </div>
-            <!-- Card 3 -->
-            <div class="blog-post">
-                <img src="../images/thirst-1474240_640.jpg" alt="Hydration and Health">
-                <h3>Hydration and Health</h3>
-                <p>Learn about the importance of hydration and tips for drinking enough water each day.</p>
-                <a class="read-more" href="#">Read More</a>
-            </div>
-        </section>
-
-        <!-- Blog section -->
-        <section class="blog-posts">
-            <!-- Card 1 -->
-            <div class="blog-post">
-                <img src="../images/raspberries-5163781_1280.jpg" alt="Superfoods to Include">
-                <h3>Superfoods to Include in Your Diet</h3>
-                <p>Find out which superfoods can boost your health and how to incorporate them into your meals.</p>
-                <a class="read-more" href="#">Read More</a>
-            </div>
-            <!-- Card 2 -->
-            <div class="blog-post">
-                <img src="../images/praying-hands-6467371_1280.jpg" alt="Mindful Eating Practices">
-                <h3>Mindful Eating Practices</h3>
-                <p>Learn how mindful eating can transform your relationship with food and improve your health.</p>
-                <a class="read-more" href="#">Read More</a>
-            </div>
-            <!-- Card 3 -->
-            <div class="blog-post">
-                <img src="../images/bread-1836411_1280.jpg" alt="The Importance of Breakfast">
-                <h3>The Importance of Breakfast</h3>
-                <p>Understand why breakfast is crucial for your health and discover healthy breakfast options.</p>
-                <a class="read-more" href="#">Read More</a>
-            </div>
-        </section>
+        </div>
     </main>
 
     <!-- Footer Section -->
@@ -134,6 +69,7 @@
                     <li><a href="../index.html">Home</a></li>
                     <li><a href="../pages/recipes.html">Healthy Recipes</a></li>
                     <li><a href="../pages/blog.html">Blog</a></li>
+                    <li><a href="../pages/mealplanner.html">Meal Planner</a></li>
                     <li><a href="../pages/news.html">News</a></li>
                     <li><a href="../pages/about.html">About Us</a></li>
                     <li><a href="../pages/contact.html">Contact Us</a></li>
@@ -166,7 +102,62 @@
             <p>&copy; 2024 HealthyFeast. All rights reserved.</p>
         </div>
     </footer>
+    <script>
+        //Blog APIs
+        const API_KEY = "bee1180d636e4f4dbff1c4f41447b213"; // Replace with your API key
+        const API_URL = "https://api.spoonacular.com/recipes/complexSearch";
 
+        async function fetchFoodBlogs() {
+            const query = document.getElementById("searchInput").value;
+            if (!query) {
+                alert("Please enter a search term.");
+                return;
+            }
+
+            const url = `${API_URL}?query=${query}&number=10&apiKey=${API_KEY}`;
+
+            try {
+                const response = await fetch(url);
+                const data = await response.json();
+                displayResults(data.results);
+            } catch (error) {
+                console.error("Error fetching food blogs:", error);
+                alert("Failed to fetch food blogs. Please try again later.");
+            }
+        }
+
+        function displayResults(results) {
+            const container = document.getElementById("resultsContainer");
+            container.innerHTML = "";
+
+            if (results.length === 0) {
+                container.innerHTML =
+                    "<p>No results found. Try a different search term.</p>";
+                return;
+            }
+
+            results.forEach((item) => {
+                const card = document.createElement("div");
+                card.className = "card";
+
+                const image = document.createElement("img");
+                image.src = item.image || "https://via.placeholder.com/250";
+                card.appendChild(image);
+
+                const title = document.createElement("h3");
+                title.textContent = item.title;
+                card.appendChild(title);
+
+                const link = document.createElement("a");
+                link.href = `https://spoonacular.com/recipes/${item.title}-${item.id}`;
+                link.textContent = "Read More";
+                link.target = "https://spoonacular.com/recipes/${item.title}-${item.id}";
+                card.appendChild(link);
+
+                container.appendChild(card);
+            });
+        }
+    </script>
 
 </body>
 

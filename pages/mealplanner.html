@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthyFeast | Meal Planner</title>
+    <link rel="icon" type="image/x-icon" href="../images/Healthy-removebg-preview.png">
+    <link rel=" stylesheet" href="../styles/style.css">
+    <script src="../main.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="../index.html"><img src="../images/Healthy-removebg-preview.png" alt="HealthyFeast Logo"> </a>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../pages/recipes.html">Recipes</a></li>
+                <li><a href="../pages/blog.html">Blog</a></li>
+                <li><a href="../pages/mealplanner.html">Meal Planner</a></li>
+                <li><a href="../pages/news.html">News</a></li>
+                <li><a href="../pages/about.html">About</a></li>
+                <li><a href="../pages/contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </header>
+
+    <h1>Meal Planner</h1>
+
+    <form id="mealForm">
+        <label for="calories">Enter daily calorie target: </label>
+        <input type="number" id="calories" name="calories" required>
+        <br>
+
+        <label for="timeFrame">Time Frame: </label>
+        <select id="timeFrame" name="timeFrame">
+            <option value="day">Day</option>
+            <option value="week">Week</option>
+        </select>
+        <br>
+
+        <label for="diet">Diet Type: </label>
+        <select id="diet" name="diet">
+            <option value="vegan">Vegan</option>
+            <option value="ovo-vegetarian">Ovo-Vegetarian</option>
+            <option value="lacto-vegetarian">Lacto-Vegetarian</option>
+            <option value="pescetarian">Pescetarian</option>
+            <option value="paleo">Paleo</option>
+            <option value="primal">Primal</option>
+            <option value="low-fodmap">Low FODMAP</option>
+            <option value="whole30">Whole30</option>
+        </select>
+        <br>
+
+        <label for="exclude">Exclude Ingredients (optional): </label>
+        <input type="text" id="exclude" name="exclude">
+        <br>
+
+        <button type="submit">Get Meal Plan</button>
+    </form>
+
+    <div id="meal-plan"></div>
+
+    <script>
+        const spoonacularApiKey = 'bee1180d636e4f4dbff1c4f41447b213';
+
+        document.getElementById('mealForm').addEventListener('submit', async (event) => {
+            event.preventDefault();
+
+            const calorieTarget = document.getElementById('calories').value;
+            const timeFrame = document.getElementById('timeFrame').value;
+            const diet = document.getElementById('diet').value;
+            const exclude = document.getElementById('exclude').value;
+            const mealPlanContainer = document.getElementById('meal-plan');
+            mealPlanContainer.innerHTML = "<p>Loading your meal plan...</p>";
+
+            try {
+                // Construct the URL with query parameters
+                let url = `https://api.spoonacular.com/mealplanner/generate?apiKey=${spoonacularApiKey}&timeFrame=${timeFrame}&targetCalories=${calorieTarget}&diet=${diet}`;
+
+                // Add exclude parameter if provided
+                if (exclude) {
+                    url += `&exclude=${exclude}`;
+                }
+
+                console.log("Fetching from URL: ", url);  // Debug: log the full URL being requested
+
+                // Fetch meal plan from Spoonacular API
+                const response = await fetch(url);
+
+                // Check for errors in response
+                if (!response.ok) {
+                    const errorText = await response.text();
+                    throw new Error(`Error fetching meal plan: ${errorText}`);
+                }
+
+                const mealData = await response.json();
+                console.log("Meal Data: ", mealData);  // Debug: log the received data
+
+                if (!mealData.meals || mealData.meals.length === 0) {
+                    throw new Error("No meals returned from the API.");
+                }
+
+                // Display meal plan
+                mealPlanContainer.innerHTML = "";
+                mealData.meals.forEach((meal) => {
+                    const mealDiv = document.createElement('div');
+                    mealDiv.className = 'meal';
+                    mealDiv.innerHTML = `
+                        <h3 onclick="window.open('${meal.sourceUrl}', '_blank')">${meal.title}</h3>
+                        <img src="https://spoonacular.com   /recipeImages/${meal.id}-636x393.jpg" alt="${meal.title}">
+                        <p><a href="${meal.sourceUrl}" target="_blank">View Recipe</a></p>
+                    `;
+                    mealPlanContainer.appendChild(mealDiv);
+                });
+
+            } catch (error) {
+                mealPlanContainer.innerHTML = `<p class="error-message">Error: ${error.message}</p>`;
+            }
+        });
+    </script>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-container">
+
+            <!-- About Section -->
+            <div class="footer-about">
+                <h3>About HealthyFeast</h3>
+                <p>At HealthyFeast, we believe that healthy eating should be easy and accessible to everyone. Our
+                    platform offers personalized meal plans, delicious recipes, and tips for a healthier lifestyle.</p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../pages/recipes.html">Healthy Recipes</a></li>
+                    <li><a href="../pages/blog.html">Blog</a></li>
+                    <li><a href="../pages/mealplanner.html">Meal Planner</a></li>
+                    <li><a href="../pages/news.html">News</a></li>
+                    <li><a href="../pages/about.html">About Us</a></li>
+                    <li><a href="../pages/contact.html">Contact Us</a></li>
+                    <li><a href="../pages/privacy.html">Privacy Policy</a></li>
+                    <li><a href="../pages/terms-conditions.html">Terms & Conditions</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p>Email: <a href="mailto:info@healthyfeast.com">info@healthyfeast.com</a></p>
+                <p>Phone: <a href="tel:+1234567890">+123 456 7890</a></p>
+            </div>
+
+            <!-- Social Media Icons -->
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#" target="_blank"><img src="../images/social/icons8-facebook-48.png" alt="Facebook"></a>
+                    <a href="#" target="_blank"><img src="../images/social/icons8-twitter-48.png" alt="Twitter"></a>
+                    <a href="#" target="_blank"><img src="../images/social/icons8-instagram-48.png" alt="Instagram"></a>
+                    <a href="#" target="_blank"><img src="../images/social/icons8-youtube-48.png" alt="YouTube"></a>
+                </div>
+            </div>
+
+        </div>
+        <!-- copyright -->
+        <div class="footer-bottom">
+            <p>&copy; 2024 HealthyFeast. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
