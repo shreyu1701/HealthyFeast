@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "image": "https://example.com/recipe1.jpg",
+    "image": "https://img.freepik.com/free-photo/vegetable-salad-with-avocado-crisp-bread_23-2148035027.jpg?t=st=1733024168~exp=1733027768~hmac=c2fc338afd14739cdaf16cf208dc41cb9fd52e84ca6b130b33de2bf175ca6b8c&w=740",
     "title": "Quinoa Salad with Avocado",
     "description": "A refreshing salad made with quinoa, fresh vegetables, and creamy avocado.",
     "nutritionalInfo": {
@@ -12,7 +12,7 @@
   },
   {
     "id": 2,
-    "image": "https://example.com/recipe2.jpg",
+    "image": "https://img.freepik.com/free-photo/black-pepper-near-salad-roasted-chicken_23-2147765360.jpg?t=st=1733024137~exp=1733027737~hmac=192645f47da14077a9eb2602349aeb2c6f2c3133fdf6b7bccde54e30cddd2886&w=740",
     "title": "Grilled Chicken and Vegetables",
     "description": "A hearty dish with grilled chicken breast and mixed vegetables.",
     "nutritionalInfo": {
@@ -23,7 +23,7 @@
   },
   {
     "id": 3,
-    "image": "https://example.com/recipe3.jpg",
+    "image": "https://img.freepik.com/free-photo/delicious-cooked-beans-bowl_23-2148746867.jpg?t=st=1733024080~exp=1733027680~hmac=4e9febe18722d9f394913257490f8fe19796c4989b594a50d9f5e028f392343b&w=740",
     "title": "Chickpea and Spinach Stew",
     "description": "A rich and nutritious stew with chickpeas, spinach, and spices.",
     "nutritionalInfo": {
@@ -34,7 +34,7 @@
   },
   {
     "id": 4,
-    "image": "https://example.com/recipe4.jpg",
+    "image": "https://img.freepik.com/free-photo/plate-with-bread-fried-egg_23-2148601060.jpg?t=st=1733024203~exp=1733027803~hmac=f78a4ae5a8da73fa2db716f38691359ac9c6b40d52591e9e0639890cd4bdb00a&w=740",
     "title": "Avocado Toast with Poached Eggs",
     "description": "Whole grain toast topped with mashed avocado and perfectly poached eggs.",
     "nutritionalInfo": {
@@ -45,7 +45,7 @@
   },
   {
     "id": 5,
-    "image": "https://example.com/recipe5.jpg",
+    "image": "https://img.freepik.com/free-photo/high-angle-sweet-potatoes-with-herbs_23-2148619092.jpg?t=st=1733024332~exp=1733027932~hmac=28f28753b2b5f65d3cbddcb5595b539733b1dcfd8e0205de1755959c32229b53&w=360",
     "title": "Sweet Potato and Black Bean Bowl",
     "description": "A flavorful bowl with roasted sweet potatoes, black beans, and spices.",
     "nutritionalInfo": {
@@ -56,7 +56,7 @@
   },
   {
     "id": 6,
-    "image": "https://example.com/recipe6.jpg",
+    "image": "https://img.freepik.com/free-photo/lentil-salad-with-peppersonion-carrot-bowl_123827-21489.jpg?t=st=1733024368~exp=1733027968~hmac=8a262d698ce380218e28ce6a4562c3b23bafbe038b2b4f817c68d5cb9f292c52&w=740",
     "title": "Lentil and Vegetable Stir-Fry",
     "description": "A quick stir-fry made with lentils and colorful vegetables.",
     "nutritionalInfo": {
@@ -67,7 +67,7 @@
   },
   {
     "id": 7,
-    "image": "https://example.com/recipe7.jpg",
+    "image": "https://img.freepik.com/free-photo/high-view-healthy-green-salad-wooden-background_23-2148440326.jpg?t=st=1733024402~exp=1733028002~hmac=d604b3d03361f0d0d5f03c4a05528cd7f99658257e2dfba501e72cc0d60163ab&w=740",
     "title": "Zucchini Noodles with Pesto",
     "description": "Low-carb zucchini noodles tossed in fresh basil pesto.",
     "nutritionalInfo": {
@@ -78,7 +78,7 @@
   },
   {
     "id": 8,
-    "image": "https://example.com/recipe8.jpg",
+    "image": "https://img.freepik.com/free-photo/grilled-salmon-with-asparagus-mushy-peas_637285-9509.jpg?t=st=1733024436~exp=1733028036~hmac=7a950373d95a13b62500ed4bc010cffc87406680d088f9c9f6be958793a44054&w=740",
     "title": "Salmon with Quinoa and Greens",
     "description": "Pan-seared salmon served with quinoa and leafy greens.",
     "nutritionalInfo": {
@@ -89,7 +89,7 @@
   },
   {
     "id": 9,
-    "image": "https://example.com/recipe9.jpg",
+    "image": "https://img.freepik.com/free-photo/top-view-high-protein-meal-composition_23-2149089636.jpg?t=st=1733024483~exp=1733028083~hmac=20dcb14d4a3e8d35af336a3b2869614d7834cb3e54033921593189d9c6ac1315&w=740",
     "title": "Tofu and Vegetable Stir-Fry",
     "description": "A plant-based stir-fry with tofu and mixed vegetables.",
     "nutritionalInfo": {
@@ -100,7 +100,7 @@
   },
   {
     "id": 10,
-    "image": "https://example.com/recipe10.jpg",
+    "image": "https://img.freepik.com/free-photo/rice-pudding-with-frozen-blueberries-raspberries-white-bowl_114579-7167.jpg?t=st=1733024509~exp=1733028109~hmac=834aa2b953b6b051d881364ee5147778b2f823b75dd43808433c764c85edc7db&w=740",
     "title": "Greek Yogurt with Berries and Nuts",
     "description": "A creamy yogurt bowl topped with fresh berries and nuts.",
     "nutritionalInfo": {
@@ -111,7 +111,7 @@
   },
   {
     "id": 11,
-    "image": "https://example.com/recipe11.jpg",
+    "image": "https://img.freepik.com/free-photo/tomatoes-stuffed-with-nuts_1220-257.jpg?t=st=1733024541~exp=1733028141~hmac=031b20afc834485ad496217a5873cac5ca587cae6b114f80ed74e8e800bf9ca0&w=740",
     "title": "Stuffed Bell Peppers with Rice and Beans",
     "description": "Bell peppers stuffed with rice, beans, and spices.",
     "nutritionalInfo": {
@@ -122,7 +122,7 @@
   },
   {
     "id": 12,
-    "image": "https://example.com/recipe12.jpg",
+    "image": "https://img.freepik.com/free-photo/front-view-delicious-bean-soup-inside-plate-dark-background_140725-98753.jpg?t=st=1733024578~exp=1733028178~hmac=3a6ff2cc2ba5451d85410cc0f16ef69e36220300db0f2c121e7920b3e42eb9cd&w=740",
     "title": "Vegetable Soup with Lentils",
     "description": "A hearty soup loaded with vegetables and lentils.",
     "nutritionalInfo": {
@@ -133,7 +133,7 @@
   },
   {
     "id": 13,
-    "image": "https://example.com/recipe13.jpg",
+    "image": "https://img.freepik.com/free-photo/delicious-vegetable-rolls-whole-sliced-bright-blue-food-meal-roll-vegetable_140725-32129.jpg?t=st=1733024611~exp=1733028211~hmac=6f511d3725bd5185453e5f2dc6f2759e4eea4294db50322bfcc3a5bf91ca762f&w=740",
     "title": "Turkey and Spinach Wrap",
     "description": "Whole wheat wrap filled with turkey, spinach, and hummus.",
     "nutritionalInfo": {
@@ -144,7 +144,7 @@
   },
   {
     "id": 14,
-    "image": "https://example.com/recipe14.jpg",
+    "image": "https://img.freepik.com/free-photo/top-view-pearl-barley-with-tasty-cooked-vegetables-grey-table_140725-134975.jpg?t=st=1733024714~exp=1733028314~hmac=4c44f941c70074397077de80f4c5647c403acac60bd5410f817c144f5d1436b2&w=740",
     "title": "Cauliflower Rice with Vegetables",
     "description": "A low-carb, veggie-packed dish with cauliflower rice.",
     "nutritionalInfo": {
@@ -155,7 +155,7 @@
   },
   {
     "id": 15,
-    "image": "https://example.com/recipe15.jpg",
+    "image": "https://img.freepik.com/free-photo/still-life-with-delicious-eggplant_23-2150392334.jpg?t=st=1733024749~exp=1733028349~hmac=0da755e57f6796cbee7418f8e04975f987a735e30031df16d26eb066409d7979&w=740",
     "title": "Eggplant Parmesan with Zoodles",
     "description": "A lighter version of eggplant Parmesan served with zucchini noodles.",
     "nutritionalInfo": {
@@ -166,7 +166,7 @@
   },
   {
     "id": 16,
-    "image": "https://example.com/recipe16.jpg",
+    "image": "https://img.freepik.com/free-photo/baked-chicken-garnished-with-asparagus-herbs_2829-11104.jpg?t=st=1733024776~exp=1733028376~hmac=dad36b1308c284a5f9c08589d3c150f6d52481944c0a1cb0ce5d9ef27a023b38&w=740",
     "title": "Baked Cod with Asparagus",
     "description": "Flaky cod baked with asparagus and fresh herbs.",
     "nutritionalInfo": {
@@ -177,7 +177,7 @@
   },
   {
     "id": 17,
-    "image": "https://example.com/recipe17.jpg",
+    "image": "https://img.freepik.com/free-photo/delicious-thai-food-still-life_23-2149508927.jpg?t=st=1733024806~exp=1733028406~hmac=784d2f5aa072b454e60ad0ef69d26f67351cfc2e8aa65cfdadbd49d01b5897ec&w=740",
     "title": "Chia Pudding with Mango",
     "description": "Creamy chia pudding layered with fresh mango puree.",
     "nutritionalInfo": {
@@ -188,7 +188,7 @@
   },
   {
     "id": 18,
-    "image": "https://example.com/recipe18.jpg",
+    "image": "https://img.freepik.com/free-photo/flat-lay-delicious-meal-pan_23-2149179582.jpg?t=st=1733024832~exp=1733028432~hmac=d0cf449acce60ec542ca73bc1f1b5eaa517ca7251d667ad5b0fd5ab615708721&w=740",
     "title": "Veggie-Packed Omelet",
     "description": "An omelet filled with bell peppers, onions, and spinach.",
     "nutritionalInfo": {
@@ -199,7 +199,7 @@
   },
   {
     "id": 19,
-    "image": "https://example.com/recipe19.jpg",
+    "image": "https://img.freepik.com/free-photo/mexican-food-concept-view_23-2148629375.jpg?t=st=1733024886~exp=1733028486~hmac=db4059cf811e2060278533a4f067777a134a0dd69f947e76b8a6a905b925c2c0&w=740",
     "title": "Avocado and Black Bean Tacos",
     "description": "Soft tacos filled with mashed avocado, black beans, and salsa.",
     "nutritionalInfo": {
@@ -210,7 +210,7 @@
   },
   {
     "id": 20,
-    "image": "https://example.com/recipe20.jpg",
+    "image": "https://img.freepik.com/free-photo/almond-banana-pancake_1339-5266.jpg?t=st=1733024929~exp=1733028529~hmac=ade034122f63d943704119678ff93bd5b1f60a979613b703ffd07e3b298290b3&w=740",
     "title": "Banana Oat Pancakes",
     "description": "Fluffy pancakes made with bananas and oats, perfect for breakfast.",
     "nutritionalInfo": {

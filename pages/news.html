@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stacked Sections</title>
+    <title>HealthyFeast | Contact</title>
     <link rel="icon" type="image/x-icon" href="../images/Healthy-removebg-preview.png">
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
@@ -14,10 +14,10 @@
 
 <body>
 
-    <!-- Header Section -->
     <header>
         <div class="logo">
-            <a href="../index.html"><img src="../images/Healthy-removebg-preview.png" alt="HealthyFeast Logo"> </a>
+            <a href="../index.html"><img src="../images/Healthy-removebg-preview.png" alt="HealthyFeast Logo" />
+            </a>
         </div>
         <nav>
             <ul class="nav-links">
@@ -35,31 +35,45 @@
             <div></div>
         </div>
     </header>
+    <section class="news-section">
+        <div class="container">
+            <h1>Healthy Eating News</h1>
+            <!-- Search and Filter Controls -->
+            <div class="news-controls">
+                <div class="search-container">
+                    <input type="text" id="newsSearch" class="search-input" placeholder="Search news..."
+                        aria-label="Search news">
+                </div>
 
-    <!-- Section 1 -->
-    <div class="container">
-        <h2>BMI Calculator (kg/mm)</h2>
-        <form id="bmiForm">
-            <label for="weight">Weight (kg):</label>
-            <input type="number" id="weight" name="weight">
-            <br><br>
-            <label for="height">Height (inches):</label>
-            <input type="number" id="height" name="height">
-            <br><br>
-            <button type="submit">Calculate BMI</button>
-        </form>
-        <div id="bmiResult"></div>
-    </div>
+                <div class="filter-container">
+                    <select id="newsFilter" class="category-filter" aria-label="Filter news by category">
+                        <option value="all">All Categories</option>
+                        <option value="health">Health</option>
+                        <option value="technology">Technology</option>
+                    </select>
+                </div>
+            </div>
 
-    <!-- Footer Section -->
+            <!-- News Container -->
+            <div id="newsContainer" class="news-container" aria-live="polite">
+                <!-- News items will be dynamically loaded here -->
+                <div class="loading-spinner">
+                    <div class="spinner"></div>
+                    <p>Loading news...</p>
+                </div>
+            </div>
+        </div>
+    </section>
     <footer class="footer">
         <div class="footer-container">
-
             <!-- About Section -->
             <div class="footer-about">
                 <h3>About HealthyFeast</h3>
-                <p>At HealthyFeast, we believe that healthy eating should be easy and accessible to everyone. Our
-                    platform offers personalized meal plans, delicious recipes, and tips for a healthier lifestyle.</p>
+                <p>
+                    At HealthyFeast, we believe that healthy eating should be easy and
+                    accessible to everyone. Our platform offers personalized meal plans,
+                    delicious recipes, and tips for a healthier lifestyle.
+                </p>
             </div>
 
             <!-- Quick Links -->
@@ -67,20 +81,25 @@
                 <h3>Quick Links</h3>
                 <ul>
                     <li><a href="../index.html">Home</a></li>
-                    <li><a href="../pages/recipes.html">Healthy Recipes</a></li>
+                    <li><a href="../pages/recipes.html">Recipes</a></li>
                     <li><a href="../pages/blog.html">Blog</a></li>
                     <li><a href="../pages/news.html">News</a></li>
                     <li><a href="../pages/about.html">About Us</a></li>
                     <li><a href="../pages/contact.html">Contact Us</a></li>
                     <li><a href="../pages/privacy.html">Privacy Policy</a></li>
-                    <li><a href="../pages/terms-conditions.html">Terms & Conditions</a></li>
+                    <li>
+                        <a href="../pages/terms-conditions.html">Terms & Conditions</a>
+                    </li>
                 </ul>
             </div>
 
             <!-- Contact Info -->
             <div class="footer-contact">
                 <h3>Contact Us</h3>
-                <p>Email: <a href="mailto:info@healthyfeast.com">info@healthyfeast.com</a></p>
+                <p>
+                    Email:
+                    <a href="mailto:info@healthyfeast.com">info@healthyfeast.com</a>
+                </p>
                 <p>Phone: <a href="tel:+1234567890">+123 456 7890</a></p>
             </div>
 
@@ -88,27 +107,19 @@
             <div class="footer-social">
                 <h3>Follow Us</h3>
                 <div class="social-icons">
-                    <a href="#" target="_blank"><img src="../images/social/icons8-facebook-48.png" alt="Facebook"></a>
-                    <a href="#" target="_blank"><img src="../images/social/icons8-twitter-48.png" alt="Twitter"></a>
-                    <a href="#" target="_blank"><img src="../images/social/icons8-instagram-48.png" alt="Instagram"></a>
-                    <a href="#" target="_blank"><img src="../images/social/icons8-youtube-48.png" alt="YouTube"></a>
+                    <a href="#" target="_blank"><img src="../images/social/icons8-facebook-48.png" alt="Facebook" /></a>
+                    <a href="#" target="_blank"><img src="../images/social/icons8-twitter-48.png" alt="Twitter" /></a>
+                    <a href="#" target="_blank"><img src="../images/social/icons8-instagram-48.png"
+                            alt="Instagram" /></a>
+                    <a href="#" target="_blank"><img src="../images/social/icons8-youtube-48.png" alt="YouTube" /></a>
                 </div>
             </div>
-
         </div>
         <!-- copyright -->
         <div class="footer-bottom">
             <p>&copy; 2024 HealthyFeast. All rights reserved.</p>
         </div>
     </footer>
-
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    <script>
-
-    </script>
-
 
 </body>
 

@@ -27,6 +27,7 @@
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="./pages/recipes.html"> Recipes</a></li>
                 <li><a href="../pages/blog.html">Blog</a></li>
+                <li><a href="../pages/news.html">News</a></li>
                 <li><a href="./pages/about.html">About</a></li>
                 <li><a href="./pages/contact.html">Contact Us</a></li>
             </ul>
@@ -46,7 +47,7 @@
                 <h1>Fuel Your Body,
                     Feed Your Soul <br>
                     with<i><strong>"HealthyFeast!"</strong></i></h1>
-                <img src="./images/freshsalad-removebg-preview.png" alt="">
+                <img src="./images/vecteezy_toasted-bread-slice-with-avocado-and-seeds-on-top-on_48107987.png" alt="">
             </div>
 
             <p>Your ultimate destination for healthy eating and nutritious recipes.</p>
@@ -99,63 +100,6 @@
             </div>
         </section>
 
-
-        <main id="main-content" class="main-content">
-            <section class="news-section">
-                <div class="container">
-                    <h1>Healthy Eating News</h1>
-                    <!-- Search and Filter Controls -->
-                    <div class="news-controls">
-                        <div class="search-container">
-                            <input type="text" id="newsSearch" class="search-input" placeholder="Search news..."
-                                aria-label="Search news">
-                            <button class="search-button" aria-label="Search">
-                                <i class="fas fa-search"></i>
-                            </button>
-                        </div>
-
-                        <div class="filter-container">
-                            <select id="newsFilter" class="category-filter" aria-label="Filter news by category">
-                                <option value="all">All Categories</option>
-                                <option value="health">Health</option>
-                                <option value="technology">Technology</option>
-                                <option value="science">Science</option>
-                                <option value="environment">Environment</option>
-                                <option value="innovation">Innovation</option>
-                            </select>
-                        </div>
-
-                        <div class="sort-container">
-                            <select id="newsSort" class="sort-filter" aria-label="Sort news">
-                                <option value="latest">Latest</option>
-                                <option value="oldest">Oldest</option>
-                                <option value="trending">Trending</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <!-- News Container -->
-                    <div id="newsContainer" class="news-container" aria-live="polite">
-                        <!-- News items will be dynamically loaded here -->
-                        <div class="loading-spinner">
-                            <div class="spinner"></div>
-                            <p>Loading news...</p>
-                        </div>
-                    </div>
-
-                    <!-- Pagination -->
-                    <div class="pagination">
-                        <button id="prevPage" class="pagination-btn" aria-label="Previous page">
-                            <i class="fas fa-chevron-left"></i>
-                        </button>
-                        <span id="currentPage" class="page-number">1</span>
-                        <button id="nextPage" class="pagination-btn" aria-label="Next page">
-                            <i class="fas fa-chevron-right"></i>
-                        </button>
-                    </div>
-                </div>
-            </section>
-        </main>
 
 
         <!-- healthy recipes -->
@@ -241,7 +185,7 @@
         </section>
 
     </main>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" defer></script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             // Load XML file
@@ -283,6 +227,7 @@
                 .catch(error => console.error("Error loading XML data:", error));
         });
 
+        //Newsletter subscription
         document.addEventListener('DOMContentLoaded', function () {
             const form = document.getElementById('ctaForm');
             const emailInput = form.querySelector('input[name="email"]');
@@ -352,7 +297,8 @@
                 <ul>
                     <li><a href="./index.html">Home</a></li>
                     <li><a href="./pages/recipes.html">Healthy Recipes</a></li>
-                    <li><a href="../pages/blog.html">Blog</a></li>
+                    <li><a href="./pages/blog.html">Blog</a></li>
+                    <li><a href="./pages/news.html">News</a></li>
                     <li><a href="./pages/about.html">About Us</a></li>
                     <li><a href="./pages/contact.html">Contact Us</a></li>
                     <li><a href="./pages/privacy.html">Privacy Policy</a></li>

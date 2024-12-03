@@ -2,17 +2,12 @@
 
 const express = require("express");
 const cors = require("cors");
-const recipes = require("../api/recipes.json");
-const news = require("../api/news.json");
+const recipes = require("./api/recipes.json");
 
 const app = express();
-const PORT = 3000;
+const PORT = 5500;
 
 app.use(cors());
-
-app.get("/", (req, res) => {
-  res.send("Hello, world!");
-});
 
 // Endpoint to get all recipes
 app.get("/api/recipes.json", (req, res) => {
@@ -29,10 +24,6 @@ app.get("/api/recipes.json/:id", (req, res) => {
   } else {
     res.status(404).js({ message: "Recipe not found" });
   }
-});
-
-app.get("/api/news.json", (req, res) => {
-  res.sendFile(path.join(__dirname, "api", "news.json"));
 });
 
 app.listen(PORT, () => {

@@ -26,29 +26,21 @@ document.addEventListener("DOMContentLoaded", function () {
       renderNews(newsData);
       setupSearchAndFilter();
     } catch (error) {
-      handleErrorState(error);
+      console.error("Failed to fetch news:", error);
     }
   }
 
-  // Render news items with advanced rendering
   function renderNews(newsItems) {
-    // Clear existing content
     newsContainer.innerHTML = "";
 
-    // Create document fragment for performance
     const fragment = document.createDocumentFragment();
 
-    // Render news items
     newsItems.forEach((newsItem) => {
       const newsItemElement = createNewsItemElement(newsItem);
       fragment.appendChild(newsItemElement);
     });
 
-    // Append all items at once
     newsContainer.appendChild(fragment);
-
-    // Add animation to news items
-    animateNewsItems();
   }
 
   // Create individual news item element
@@ -167,43 +159,6 @@ document.addEventListener("DOMContentLoaded", function () {
               </div>
           </div>
       `;
-
-    // Close modal functionality
-    const closeModal = modal.querySelector(".close-modal");
-    closeModal.addEventListener("click", () => {
-      document.body.removeChild(modal);
-    });
-
-    document.body.appendChild(modal);
-  }
-
-  // Animate news items on load
-  function animateNewsItems() {
-    const newsItems = document.querySelectorAll(".news-item");
-    newsItems.forEach((item, index) => {
-      item.style.opacity = "0";
-      item.style.transform = "translateY(20px)";
-
-      setTimeout(() => {
-        item.style.transition = "all 0.5s ease";
-        item.style.opacity = "1";
-        item.style.transform = "translateY(0)";
-      }, index * 100);
-    });
-  }
-
-  // Error handling
-  function handleErrorState(error) {
-    newsContainer.innerHTML = `
-          <div class="error-message">
-              <h3>Oops! Something went wrong</h3>
-              <p>${error.message}</p>
-              <button id="retryButton">Retry</button>
-          </div>
-      `;
-
-    const retryButton = document.getElementById("retryButton");
-    retryButton.addEventListener("click", fetchNews);
   }
 
   // Utility Functions
@@ -233,3 +188,137 @@ document.addEventListener("DOMContentLoaded", function () {
   // Initial fetch
   fetchNews();
 });
+
+// Recipes
+document.addEventListener("DOMContentLoaded", () => {
+  fetch("http://127.0.0.1:5501/api/recipes.json")
+    .then((response) => response.json())
+    .then((recipes) => {
+      const recipesContainer = document.getElementById("recipes");
+      recipes.forEach((recipe) => {
+        const card = document.createElement("div");
+        card.className = "recipe-card";
+        card.innerHTML = `
+        <img src="${recipe.image}"></img>
+                  <h2>${recipe.title}</h2>
+                  <p>${recipe.description}</p><br>
+                  <strong>Nutritional Info:</strong>
+                  <p><strong>Protien:</strong>${recipe.nutritionalInfo.protein}</p>
+                  <p><strong>Carbs :</strong>${recipe.nutritionalInfo.carbs}</p>
+                  <p><strong>Fats :</strong>${recipe.nutritionalInfo.fat}</p>  
+              `;
+        recipesContainer.appendChild(card);
+      });
+    })
+    .catch((error) => console.error("Error fetching recipes:", error));
+});
+
+// BMI
+
+$("#bmiForm").on("submit", function (event) {
+  event.preventDefault(); // Prevent form from submitting normally
+
+  const weightKg = $("#weight").val();
+  const heightInches = $("#height").val();
+
+  // Validation
+  if (!weightKg || (weightKg <= 0 && weightKg >= 200)) {
+    Toastify({
+      text: "Please enter a valid weight (1-200 kg)",
+      duration: 3000,
+      close: true,
+      gravity: "top",
+      position: "right",
+      backgroundColor: "#FF6B6B",
+    }).showToast();
+    return;
+  }
+
+  if (!heightInches || (heightInches <= 0 && heightInches >= 100)) {
+    Toastify({
+      text: "Please enter a valid height (1-100 inches)",
+      duration: 3000,
+      close: true,
+      gravity: "top",
+      position: "right",
+      backgroundColor: "#FF6B6B",
+    }).showToast();
+    return;
+  }
+
+  // Conversion: kg to lbs (1 kg = 2.20462 lbs)
+  const weightLbs = weightKg * 2.20462;
+
+  const settings = {
+    async: true,
+    crossDomain: true,
+    url: `https://smart-body-mass-index-calculator-bmi.p.rapidapi.com/api/BMI/imperial?lbs=${weightLbs.toFixed(
+      2
+    )}&inches=${heightInches}`,
+    method: "GET",
+    headers: {
+      "x-rapidapi-key": "c712408eb2mshf3605eb7da791aap1465acjsn8ed2de14ff24",
+      "x-rapidapi-host": "smart-body-mass-index-calculator-bmi.p.rapidapi.com",
+    },
+  };
+
+  $.ajax(settings)
+    .done(function (response) {
+      // Success Toastify
+      Toastify({
+        text: `BMI Calculated Successfully!`,
+        duration: 3000,
+        close: true,
+        gravity: "top",
+        position: "right",
+        backgroundColor: "#4CAF50",
+      }).showToast();
+
+      // Display detailed BMI result
+      $("#bmiResult").html(`
+          <p>Your BMI is: ${response.bmi.toFixed(2)}</p>
+          <p>Category: ${response.bmiCategoryForAdults.category}</p>
+      `);
+
+      // Additional Toastify for BMI Category
+      Toastify({
+        text: `BMI Category: ${response.bmiCategoryForAdults.category}`,
+        duration: 4000,
+        close: true,
+        gravity: "bottom",
+        position: "center",
+        backgroundColor: getBMICategoryColor(
+          response.bmiCategoryForAdults.category
+        ),
+      }).showToast();
+    })
+    .fail(function (xhr, status, error) {
+      // Error Toastify
+      Toastify({
+        text: "Error calculating BMI. Please try again.",
+        duration: 3000,
+        close: true,
+        gravity: "top",
+        position: "right",
+        backgroundColor: "#FF6B6B",
+      }).showToast();
+
+      console.error("BMI Calculation Error:", error);
+    });
+});
+
+// Helper function to get color based on BMI category
+function getBMICategoryColor(category) {
+  switch (category.toLowerCase()) {
+    case "underweight":
+      return "#FFA500"; // Orange
+    case "normal weight":
+      return "#4CAF50"; // Green
+    case "overweight":
+      return "#FF9800"; // Deep Orange
+    case "obese":
+      return "#F44336"; // Red
+    default:
+      return "#2196F3"; // Blue
+  }
+}
