@@ -191,7 +191,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Recipes
 document.addEventListener("DOMContentLoaded", () => {
-  fetch("http://127.0.0.1:5501/api/recipes.json")
+  fetch("https://healthy-feast.vercel.app/api/recipes.json")
     .then((response) => response.json())
     .then((recipes) => {
       const recipesContainer = document.getElementById("recipes");
