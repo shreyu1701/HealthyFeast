@@ -10,12 +10,12 @@ const PORT = 5500;
 app.use(cors());
 
 // Endpoint to get all recipes
-app.get("../api/recipes.json", (req, res) => {
+app.get("https://healthy-feast.vercel.app/api/recipes.json", (req, res) => {
   res.json(recipes);
 });
 
 // Endpoint to get a recipe by ID
-app.get("../api/recipes.json/:id", (req, res) => {
+app.get("https://healthy-feast.vercel.app/api/recipes.json/:id", (req, res) => {
   const recipeId = parseInt(req.params.id, 10);
   const recipe = recipes.find((r) => r.id === recipeId);
 
