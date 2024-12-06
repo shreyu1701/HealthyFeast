@@ -115,9 +115,9 @@
                     const mealDiv = document.createElement('div');
                     mealDiv.className = 'meal';
                     mealDiv.innerHTML = `
-                        <h3 onclick="window.open('${meal.sourceUrl}', '_blank')">${meal.title}</h3>
-                        <img src="https://spoonacular.com   /recipeImages/${meal.id}-636x393.jpg" alt="${meal.title}">
-                        <p><a href="${meal.sourceUrl}" target="_blank">View Recipe</a></p>
+                        <h1 onclick="window.open('${meal.sourceUrl}', '_blank')">${meal.title}</h1>
+                        <img src="https://spoonacular.com/recipeImages/${meal.id}-636x393.jpg" alt="${meal.title}">
+                        <button><a href="${meal.sourceUrl}" style="color: white; text-decoration: none;" target="_blank">View Recipe</a></button>
                     `;
                     mealPlanContainer.appendChild(mealDiv);
                 });

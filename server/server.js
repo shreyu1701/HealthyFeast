@@ -10,12 +10,12 @@ const PORT = 5500;
 app.use(cors());
 
 // Endpoint to get all recipes
-app.get("/api/recipes.json", (req, res) => {
+app.get("../api/recipes.json", (req, res) => {
   res.json(recipes);
 });
 
 // Endpoint to get a recipe by ID
-app.get("/api/recipes.json/:id", (req, res) => {
+app.get("../api/recipes.json/:id", (req, res) => {
   const recipeId = parseInt(req.params.id, 10);
   const recipe = recipes.find((r) => r.id === recipeId);
 
@@ -27,5 +27,5 @@ app.get("/api/recipes.json/:id", (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Server running on http://127.0.0.1/:${PORT}`);
+  console.log(`Server running on https://healthy-feast.vercel.app/`);
 });

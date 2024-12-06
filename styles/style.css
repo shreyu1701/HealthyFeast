@@ -1062,6 +1062,9 @@ form button:hover {
 }
 
 .meal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background: #f9f9f9;
     border: 1px solid #ddd;
     padding: 15px;
