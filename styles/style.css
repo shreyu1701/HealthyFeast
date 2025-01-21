@@ -784,7 +784,7 @@ h1 {
 .about-section:hover {
     transform: scale(1.02);
     background-color: #d3991c;
-    color: white;
+
 }
 
 .about-section h2 {
@@ -821,7 +821,8 @@ h1 {
 }
 
 .team-card img {
-    height: 150px;
+    height: 280px;
+    width: 100%;
     object-fit: cover;
 }
 
